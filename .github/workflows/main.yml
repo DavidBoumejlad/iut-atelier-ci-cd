@@ -19,9 +19,9 @@ jobs:
       - name: "[CD] Publication du code"
         uses: nwtgck/actions-netlify@v1.2
         with:
-   	  publish-dir: "./atelier"
-    	  production-branch: atl0_actif
-  	env:
-    	  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-    	  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          publish-dir: "./atelier"
+          production-branch: atl0_actif
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         
