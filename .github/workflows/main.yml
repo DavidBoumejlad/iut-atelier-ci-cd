@@ -3,7 +3,7 @@ name: CI/CD pour Atelier 0 David Boumejald # Le nom de la chaine CI/CD (workflow
 on:
   # Lance la chaine CI/CD lorsque un `git push` est effectué sur les branches indiquées
   push:
-    branches: [atl0] #TODO A completer
+    branches: [atl0_actif] #TODO A completer
 # Les taches (jobs) à effectuer
 jobs:
   # Chaque tache (job) est représentée par un serveur, ce qui permet l'indépendance des tâches.
@@ -15,7 +15,7 @@ jobs:
       - name: "[DEBUG] Lister l'arborescence de fichiers sur le serveur"
         run: ls -l . # étape informative
       - name: "[CI] Test du code"
-        run: echo KO #TODO A completer
+        run: cd atelier/ && ./test.sh #TODO A completer
       - name: "[CD] Publication du code"
         run: echo KO #TODO A completer
         
